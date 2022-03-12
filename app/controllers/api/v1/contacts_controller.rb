@@ -16,13 +16,14 @@ class Api::V1::ContactsController < ApplicationController
 
     # Set HTTP Status if Save or not
     if @contact.save
-      render json: @contact, status :created
+      render json: @contact, status :created # 201
     else
-      render json: @contact.errors, status :unprocessable_entity
+      render json: @contact.errors, status :unprocessable_entity # 422
     end
   end
 
   def destroy
+    #sdfs
   end
   private
 
